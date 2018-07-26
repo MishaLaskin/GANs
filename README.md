@@ -1,9 +1,5 @@
 # GANs
 
-You can view a write-up on the subject here 
-
-https://paper.dropbox.com/doc/GANs--AIgavHo4deGgaJ8~EP4dIv0tAQ-FawjaaJP9R7dDYlTfcvdX
-
 # GANs
 We’ll use a simple GAN to generate frog images from the CIFAR dataset
 
@@ -16,11 +12,11 @@ CIFAR has 10 image classes with **5,000 training images** of **dimension 32X32**
 ## Image Generation Program
 
 
-1. A generator network $$G$$ maps images of shape `(latent_dim,)` to `(32,32,3)` , so the generator map is $$G: \mathbb{R}\rightarrow \mathbb{R}^3$$
-2. A discriminator network $$D$$ maps the images from `(32,32,3)`, to a binary score $$$$`[0,1]` predicting whether the image is real or fake
-3.  A GAN network chains $$D$$ and $$G$$ so $$GAN = D(G(x))$$, so the GAN map is $$G: \mathbb{R} \rightarrow \mathbb{R}^3 \rightarrow [0,1]$$, from `(latent_dim,)` to `(32,32,3)` to `[0,1]`
-4. $$D$$ is trained with a collection of fake images (from $$G$$) and real images from the training set
-5. To train $$G$$, you adjust the weights in $$G$$ with regard to the loss of the $$GAN$$ model, so $$G$$ weights are updated in the directions that makes $$D$$ more likely classify fake images as real
+1. A generator network $G$ maps images of shape `(latent_dim,)` to `(32,32,3)` , so the generator map is $G: \mathbb{R}\rightarrow \mathbb{R}^3$
+2. A discriminator network $D$ maps the images from `(32,32,3)`, to a binary score `[0,1]` predicting whether the image is real or fake
+3.  A GAN network chains $D$ and $G$ so $GAN = D(G(x))$, so the GAN map is $G: \mathbb{R} \rightarrow \mathbb{R}^3 \rightarrow [0,1]$, from `(latent_dim,)` to `(32,32,3)` to `[0,1]`
+4. $D$ is trained with a collection of fake images (from $G$) and real images from the training set
+5. To train $G$, you adjust the weights in $G$ with regard to the loss of the $GAN$ model, so $G$ weights are updated in the directions that makes $D$ more likely classify fake images as real
 
 
 
